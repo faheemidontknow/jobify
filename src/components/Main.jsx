@@ -10,12 +10,13 @@ import {
 } from "lucide-react";
 import Header from "./Header";
 import Footer from "./Footer";
+import api from "../api/axios";
 
 const Main = () => {
   return (
     <>
       <Header />
-      <main className="bg-gradient-to-br from-white via-[#f8f8ff] to-[#f1f1ff]">
+      <main className="bg-linear-to-br from-white via-[#f8f8ff] to-[#f1f1ff]">
         <section className="max-w-7xl mx-auto px-6 lg:px-10  pb-10">
           <div className="grid lg:grid-cols-2 items-center gap-12">
             {/* LEFT SIDE */}
@@ -54,19 +55,19 @@ const Main = () => {
             {/* RIGHT SIDE */}
             <div className="relative flex justify-center">
               {/* Background blobs */}
-              <div className="absolute w-[420px] h-[420px] bg-[#7567ff] rounded-full opacity-80 top-12 left-1/2 -translate-x-1/2"></div>
+              <div className="absolute w-105 h-105 bg-[#7567ff] rounded-full opacity-80 top-12 left-1/2 -translate-x-1/2"></div>
 
               {/* Replace with your actual image */}
               <img
                 src="img3.png"
                 alt="Job seekers"
-                className="relative z-10 w-full max-w-[450px] object-contain"
+                className="relative z-10 w-full max-w-112.5 object-contain"
               />
             </div>
           </div>
 
           {/* SEARCH BOX */}
-          <div className="relative z-30 mt-[-10px]">
+          <div className="relative z-30 -mt-2.5">
             <div className="bg-white shadow-xl border border-slate-200 rounded-2xl p-3 grid md:grid-cols-4 items-center">
               {/* Job search */}
               <div className="flex items-center gap-3 px-5 py-4 md:border-r border-slate-200">
