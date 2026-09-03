@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import { Toaster, toast } from "sonner";
+import EmployerDashboard from "./pages/employer/EmployerDashboard";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/" element={<Main />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/employer/dashboard" element={<EmployerDashboard />} />
       </Routes>
     </BrowserRouter>
   );
