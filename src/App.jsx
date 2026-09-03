@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import Employee from "./pages/Employee";
 import { Toaster, toast } from "sonner";
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/" element={<Main />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/employee" element={<Employee />} />
       </Routes>
     </BrowserRouter>
   );

@@ -4,6 +4,7 @@ import registersvg from "../assets/register.svg";
 import Button from "../components/Button";
 import api from "../api/axios.js";
 import { toast } from "sonner";
+import { useNavigate } from "react-router";
 
 const Register = () => {
   const [fullName, setFullName] = useState("");
@@ -11,6 +12,7 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [role, setRole] = useState("");
   const [loading, setloading] = useState(false);
+  const navigate = useNavigate();
 
   async function handleSignup(e) {
     e.preventDefault();
