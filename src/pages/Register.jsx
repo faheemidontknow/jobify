@@ -34,12 +34,19 @@ const Register = () => {
     try {
       setloading(true);
       const res = await api.post("/register", userData);
-      console.log(res.data);
-      setFullName("");
-      setPassword("");
-      setConfirmPassword("");
-      setRole("");
-      toast(res.data.message, { duration: 1000 });
+      if (res.data.success) {
+        console.log(res.data);
+        setFullName("");
+        setPassword("");
+        setConfirmPassword("");
+        setRole("");
+        toast(res.data.message, { duration: 1000 });
+        res.data.role === "employee"
+          ? navigate("/employee")
+          : navigate("/employer");
+      } else {
+        toast(res.data.message);
+      }
     } catch (error) {
       console.log(error);
     } finally {
