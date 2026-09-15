@@ -7,7 +7,7 @@ const EmployerLayout = () => {
     <div className="min-h-screen bg-[#f8f9fc]">
       <EmployerSidebar />
 
-      <main className="ml-64 p-8">
+      <main className="ml-64 min-h-screen p-8">
         <Outlet />
       </main>
     </div>

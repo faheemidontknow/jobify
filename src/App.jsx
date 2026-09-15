@@ -5,19 +5,22 @@ import Footer from "./components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
-
+//employee
 import EmployeeLayout from "./pages/employee/EmployeeLayout";
-import Employee from "./pages/Employee";
+import Employee from "./pages/employee/Employee";
 import FindJobs from "./pages/employee/FindJobs";
-
+import SavedJobs from "./pages/employee/SavedJobs";
+import MyApplication from "./pages/employee/MyApplication";
+import Recommended from "./pages/employee/Recommended";
+//employer
 import { Toaster } from "sonner";
 import EmployerDashboard from "./pages/employer/EmployerDashboard";
 import EmployerLayout from "./pages/employer/EmployerLayout";
 import RecentJobs from "./components/employer/RecentJobs";
 import RecentApplicants from "./components/employer/RecentApplicants";
-import MyApplication from "./pages/employee/MyApplication";
-import SavedJobs from "./pages/employee/SavedJobs";
-import Recommended from "./pages/employee/Recommended";
+import PostJob from "./components/employer/PostJob";
+import EmployerSection from "./components/employer/EmployerSection";
+import CompanyProfile from "./components/employer/profile";
 
 const App = () => {
   return (
@@ -45,19 +48,28 @@ const App = () => {
           <Route path="applicants" element={<RecentApplicants />} />
 
           {/* /employer/post-job */}
-          {/* <Route path="post-job" element={<PostJob />} /> */}
+          <Route path="post-job" element={<PostJob />} />
 
           {/* /employer/interviews */}
-          {/* <Route path="interviews" element={<Interviews />} /> */}
+          <Route
+            path="interviews"
+            element={<EmployerSection section="interviews" />}
+          />
 
           {/* /employer/messages */}
-          {/* <Route path="messages" element={<Messages />} /> */}
+          <Route
+            path="messages"
+            element={<EmployerSection section="messages" />}
+          />
 
           {/* /employer/profile */}
-          {/* <Route path="profile" element={<CompanyProfile />} /> */}
+          <Route path="profile" element={<CompanyProfile />} />
 
           {/* /employer/settings */}
-          {/* <Route path="settings" element={<Settings />} /> */}
+          <Route
+            path="settings"
+            element={<EmployerSection section="settings" />}
+          />
         </Route>
 
         {/* EMPLOYEE */}

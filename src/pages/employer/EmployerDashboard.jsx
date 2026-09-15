@@ -22,6 +22,9 @@ export default function EmployerDashboard() {
     async function loadDashboard() {
       try {
         const data = await getEmployerDashboard();
+
+        console.log("DASHBOARD DATA:", data);
+
         setDashboard(data);
       } catch (error) {
         console.error("Failed to load dashboard:", error);
