@@ -107,7 +107,7 @@ function Dashboard() {
           </button>
 
           {/* Search */}
-          <div className="relative hidden w-[390px] md:block">
+          <div className="relative hidden w-97.5 md:block">
             <Search
               size={15}
               className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
@@ -244,7 +244,7 @@ function Dashboard() {
 
                 <div className="flex items-center gap-6">
                   {/* Circle */}
-                  <div className="relative flex h-[100px] w-[100px] shrink-0 items-center justify-center">
+                  <div className="relative flex h-25 w-25 shrink-0 items-center justify-center">
                     <svg
                       className="absolute h-full w-full -rotate-90"
                       viewBox="0 0 100 100"
